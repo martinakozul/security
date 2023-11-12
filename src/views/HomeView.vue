@@ -19,7 +19,7 @@
 <script>
   import { useAuth0 } from '@auth0/auth0-vue';
   import { db } from '../firebase'
-  import { addDoc, collection, where, getDocs, query,  } from "firebase/firestore"; 
+  import { addDoc, collection, where, getDocs, query } from "firebase/firestore"; 
 
 
   export default {
