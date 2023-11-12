@@ -22,6 +22,7 @@
 </template>
 
 <script>
+import sanitizeHtml from 'sanitize-html'
 export default {
   data() {
     return {
@@ -45,7 +46,7 @@ export default {
       if (this.getXSS()) {
         return this.userInput;
       }
-      return this.userInput.replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      return sanitizeHtml(this.userInput);
     }
   }
 };
